@@ -1,6 +1,7 @@
 import "../styles/normalize.css";
 import "../styles/globals.css";
 import { useState, useEffect } from "react";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function MyApp({ Component, pageProps }) {
   const [carrito, setCarrito] = useState([]);
@@ -50,13 +51,15 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <Component
-      {...pageProps}
-      carrito={carrito}
-      agregarCarrito={agregarCarrito}
-      actualizarCantidad={actualizarCantidad}
-      eliminarProducto={eliminarProducto}
-    />
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Component
+        {...pageProps}
+        carrito={carrito}
+        agregarCarrito={agregarCarrito}
+        actualizarCantidad={actualizarCantidad}
+        eliminarProducto={eliminarProducto}
+      />
+    </ErrorBoundary>
   );
 }
 
