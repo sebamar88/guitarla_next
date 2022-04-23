@@ -51,15 +51,13 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Component
-        {...pageProps}
-        carrito={carrito}
-        agregarCarrito={agregarCarrito}
-        actualizarCantidad={actualizarCantidad}
-        eliminarProducto={eliminarProducto}
-      />
-    </ErrorBoundary>
+    <Component
+      {...pageProps}
+      carrito={carrito}
+      agregarCarrito={agregarCarrito}
+      actualizarCantidad={actualizarCantidad}
+      eliminarProducto={eliminarProducto}
+    />
   );
 }
 
