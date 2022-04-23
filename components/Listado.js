@@ -6,7 +6,7 @@ const Listado = ({ guitarras }) => {
     <div className={styles.listado}>
       {guitarras &&
         guitarras.map((guitarra) => (
-          <Product {...guitarra} key={guitarra.id} />
+          <Product {...guitarra} key={guitarra._id} />
         ))}
     </div>
   );

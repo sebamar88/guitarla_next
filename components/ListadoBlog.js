@@ -7,7 +7,7 @@ const ListadoBlog = ({ entradas }) => {
       <h2 className="heading">Blog</h2>
       <div className={styles.blog}>
         {entradas.map((entrada) => (
-          <Post key={entrada.id} entrada={entrada} />
+          <Post key={entrada._id} entrada={entrada} />
         ))}
       </div>
     </>
