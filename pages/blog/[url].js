@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { formatearFecha } from "../../helpers";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import styles from "../../styles/Post.module.css";
 
 const PostPage = ({ entrada }) => {
