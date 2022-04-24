@@ -1,7 +1,6 @@
 import "../styles/normalize.css";
 import "../styles/globals.css";
 import { useState, useEffect } from "react";
-import ErrorBoundary from "../components/ErrorBoundary";
 
 function MyApp({ Component, pageProps }) {
   const [carrito, setCarrito] = useState([]);
